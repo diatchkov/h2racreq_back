@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Accommodation request approval: RFC</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_H2R0004_ACC_RFCTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_H2R0004_ACC_RFC</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_H2R0004_SET_APPROVED_STATUS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Accommodation request: set approved status</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_LPOR</PARAMETER>
+       <TYP>SIBFLPOR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_LPOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Local Persistent Object Reference</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_H2R0004_SET_REJECTED_STATUS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Accommodation request: set rejected status</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_LPOR</PARAMETER>
+       <TYP>SIBFLPOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_COMMENT</PARAMETER>
+       <TYP>SWC_VALUE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_LPOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Local Persistent Object Reference</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_COMMENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character value</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

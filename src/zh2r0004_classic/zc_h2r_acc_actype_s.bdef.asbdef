@@ -1,0 +1,40 @@
+projection implementation in class ZBP_C_H2R_ACC_ACTYPE unique;
+strict;
+use draft;
+
+define behavior for ZC_H2R_ACC_ACTYPE_S alias AccTypeAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _AccType { create ( augment ); with draft; }
+}
+
+define behavior for ZC_H2R_ACC_ACTYPE alias AccType
+
+{
+  field ( modify )
+   ActypeText;
+
+
+  use update( augment );
+  use delete;
+
+  use association _AccTypeAll { with draft; }
+  use association _AccTypeText { create; with draft; }
+}
+
+define behavior for ZC_H2R_ACC_ACTYPT alias AccTypeText
+
+{
+  use update;
+  use delete;
+
+  use association _AccTypeAll { with draft; }
+  use association _AccType { with draft; }
+}

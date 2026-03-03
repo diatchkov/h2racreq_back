@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZZ1_90000001_DEADLINE</ID>
+     <VERSION>A</VERSION>
+     <CDS_VIEW>ZC_H2R_ACC_ACREQ_MAIL</CDS_VIEW>
+     <PARENT_ID>ZH2R0004_ACC_DEADLINE</PARENT_ID>
+     <ORIGINAL_ID>ZH2R0004_ACC_DEADLINE</ORIGINAL_ID>
+     <ABAP_LANGUAGE_VERSION>2</ABAP_LANGUAGE_VERSION>
+     <SMTG_VERSION>1</SMTG_VERSION>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZZ1_90000001_DEADLINE</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <NAME>Accommodation request: dealine missed</NAME>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZZ1_90000001_DEADLINE</ID>
+      <VERSION>A</VERSION>
+      <LANGU>A</LANGU>
+      <SUBJECT>{{AccRequestText}} request deadline missed</SUBJECT>
+      <BODY_TXT>{{AccRequestText}} Request Deadline Missed⏰{{AccRequestText}} request deadline missedDear {{ApproverFirstName}},We regret to inform you that the required submission deadline has passed.{{AccRequestText}} requests must be submitted by the established deadline to allow sufficient time for review, processing and arrangement of suitable accommodations.Employee:{{AccUserFullName}}Accommodation type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Kind regards,Facilities teamThis is an automated message. Please do not reply to this email.If you have questions, contact the facilities team at accommodation@contango.ae</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;{{AccRequestText}} Request Deadline Missed&lt;/title&gt;
+    &lt;style&gt;
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: &apos;Segoe UI&apos;, Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        
+        /* Email container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Header */
+        .email-header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .email-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .para {
+            margin-bottom: 12px;
+        }
+        
+        .deadline-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Content area */
+        .email-content {
+            padding: 35px 40px;
+            color: #333;
+        }
+        
+        /* Salutation */
+        .salutation {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .employee-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* Main message */
+        .main-message {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .detail-label {
+            font-size: 14px;
+            font-weight: 600;
+            width: 45%;
+            color: #555;
+        }
+        
+        .detail-value {
+            font-size: 14px;
+            width: 55%;
+            color: #333;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .email-content, .email-footer {
+                padding: 25px;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                width: 100%;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+            
+            .email-header {
+                padding: 10px;
+            }
+            
+            .email-header h1 {
+                font-size: 14px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;email-container&quot;&gt;
+        &lt;div class=&quot;email-header&quot;&gt;
+            &lt;div class=&quot;deadline-icon&quot;&gt;⏰&lt;/div&gt;
+            &lt;h1&gt;{{AccRequestText}} request deadline missed&lt;/h1&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;email-content&quot;&gt;
+            &lt;div class=&quot;salutation&quot;&gt;Dear {{ApproverFirstName}},&lt;/div&gt;
+            
+            &lt;div class=&quot;main-message&quot;&gt;
+                &lt;p&gt;We regret to inform you that the required submission deadline has passed.&lt;/p&gt;
+                
+                &lt;p&gt;{{AccRequestText}} requests must be submitted by the established deadline to allow sufficient time for review, processing and arrangement of suitable accommodations.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;request-details&quot;&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccUserFullName}}&lt;/div&gt;
+                &lt;/div&gt;                
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Accommodation type:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccTypeText}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Building:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBuildName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Floor:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccFloor}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Apartment:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccApart}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Bed:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBed}}&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div&gt;
+        &lt;p class=&quot;para&quot;&gt;&lt;/p&gt;
+        &lt;p class=&quot;para&quot;&gt;Kind regards,&lt;/p&gt;
+        &lt;p class=&quot;para&quot;&gt;&lt;b&gt;Facilities team&lt;/b&gt;&lt;/p&gt;       
+        &lt;/div&gt;
+        &lt;/div&gt;
+            
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;p&gt;This is an automated message. Please do not reply to this email.&lt;/p&gt;
+                &lt;p&gt;If you have questions, contact the facilities team at accommodation@contango.ae&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+     <SMTG_TMPL_CONT>
+      <ID>ZZ1_90000001_DEADLINE</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <SUBJECT>{{AccRequestText}} request deadline missed</SUBJECT>
+      <BODY_TXT>{{AccRequestText}} Request Deadline Missed⏰{{AccRequestText}} request deadline missedDear {{ApproverFirstName}},We regret to inform you that the required submission deadline has passed.{{AccRequestText}} requests must be submitted by the established deadline to allow sufficient time for review, processing and arrangement of suitable accommodations.Employee:{{AccUserFullName}}Accommodation type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Kind regards,Facilities TeamThis is an automated message. Please do not reply to this email.If you have questions, contact the facilities team at accommodation@contango.ae</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;{{AccRequestText}} Request Deadline Missed&lt;/title&gt;
+    &lt;style&gt;
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: &apos;Segoe UI&apos;, Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        
+        /* Email container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Header */
+        .email-header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .email-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .para {
+            margin-bottom: 12px;
+        }
+        
+        .deadline-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Content area */
+        .email-content {
+            padding: 35px 40px;
+            color: #333;
+        }
+        
+        /* Salutation */
+        .salutation {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .employee-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* Main message */
+        .main-message {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .detail-label {
+            font-size: 14px;
+            font-weight: 600;
+            width: 45%;
+            color: #555;
+        }
+        
+        .detail-value {
+            font-size: 14px;
+            width: 55%;
+            color: #333;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .email-content, .email-footer {
+                padding: 25px;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                width: 100%;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+            
+            .email-header {
+                padding: 10px;
+            }
+            
+            .email-header h1 {
+                font-size: 14px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;email-container&quot;&gt;
+        &lt;div class=&quot;email-header&quot;&gt;
+            &lt;div class=&quot;deadline-icon&quot;&gt;⏰&lt;/div&gt;
+            &lt;h1&gt;{{AccRequestText}} request deadline missed&lt;/h1&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;email-content&quot;&gt;
+            &lt;div class=&quot;salutation&quot;&gt;Dear {{ApproverFirstName}},&lt;/div&gt;
+            
+            &lt;div class=&quot;main-message&quot;&gt;
+                &lt;p&gt;We regret to inform you that the required submission deadline has passed.&lt;/p&gt;
+                
+                &lt;p&gt;{{AccRequestText}} requests must be submitted by the established deadline to allow sufficient time for review, processing and arrangement of suitable accommodations.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;request-details&quot;&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccUserFullName}}&lt;/div&gt;
+                &lt;/div&gt;                
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Accommodation type:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccTypeText}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Building:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBuildName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Floor:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccFloor}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Apartment:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccApart}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Bed:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBed}}&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div&gt;
+        &lt;p class=&quot;para&quot;&gt;&lt;/p&gt;
+        &lt;p class=&quot;para&quot;&gt;Kind regards,&lt;/p&gt;
+        &lt;p class=&quot;para&quot;&gt;&lt;b&gt;Facilities Team&lt;/b&gt;&lt;/p&gt;       
+        &lt;/div&gt;
+        &lt;/div&gt;
+            
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;p&gt;This is an automated message. Please do not reply to this email.&lt;/p&gt;
+                &lt;p&gt;If you have questions, contact the facilities team at accommodation@contango.ae&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

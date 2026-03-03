@@ -1,0 +1,65 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccType', 
+    typeNamePlural: 'AccTypes', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation type', 
+      value: 'Actype'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_ACTYPE with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_ACTYPE', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation type', 
+    position: 1 
+  }, 
+  {
+    id: 'ZI_H2R_ACC_ACTYPT', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Accomodation type text', 
+    position: 2 , 
+    targetElement: '_AccTypeText'
+  } ]
+  Actype;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  CreateUser;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  CreateTmst;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  ChangeUser;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  ChangeTmst;
+  
+  @UI.identification: [ {
+    hidden: true, 
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  ActypeText;
+}

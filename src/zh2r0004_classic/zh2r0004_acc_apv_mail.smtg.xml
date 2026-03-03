@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZH2R0004_ACC_APV_MAIL</ID>
+     <VERSION>A</VERSION>
+     <CDS_VIEW>ZC_H2R_ACC_ACREQ_MAIL</CDS_VIEW>
+     <IS_PREDELIVERED>X</IS_PREDELIVERED>
+     <SMTG_VERSION>1</SMTG_VERSION>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZH2R0004_ACC_APV_MAIL</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <NAME>Accommodation request: approve e-mail</NAME>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZH2R0004_ACC_APV_MAIL</ID>
+      <VERSION>A</VERSION>
+      <LANGU>A</LANGU>
+      <SUBJECT>Accommodation request for {{_AccRequest._Employee.FullName}} has been approved</SUBJECT>
+      <BODY_TXT>Dear {{_AccRequest._Employee.FullName}},
+Your accommodation request with the following parameters has been approved:
+Type: {{_AccRequest._AccType.AccTypeText}}
+Building: {{_AccRequest._AccBuild.AccBuildName}}
+Floor: {{_AccRequest._AccFloor.AccFloor}}
+Apartment: {{_AccRequest._AccApart.AccApart}} ({{_AccRequest._AccApart.ApartTypeText}})
+Bed: {{_AccRequest._AccBed.AccBed}} - {{_AccRequest._AccBed.Accid}} - {{_AccRequest._AccBed.Amount}}{{_AccRequest._AccBed.Currency}}
+{{AccOfficerNotes}}
+{{AccManagerNotes}}</BODY_TXT>
+      <BODY_HTML>Dear {{_AccRequest._Employee.FullName}}, 
+
+Your accommodation request with the following parameters has been approved: 
+
+Type: {{_AccRequest._AccType.AccTypeText}}
+Building: {{_AccRequest._AccBuild.AccBuildName}}
+Floor: {{_AccRequest._AccFloor.AccFloor}}
+Apartment: {{_AccRequest._AccApart.AccApart}} ({{_AccRequest._AccApart.ApartTypeText}})
+Bed: {{_AccRequest._AccBed.AccBed}} - {{_AccRequest._AccBed.Accid}} - {{_AccRequest._AccBed.Amount}}{{_AccRequest._AccBed.Currency}}
+
+{{AccOfficerNotes}}
+{{AccManagerNotes}}
+</BODY_HTML>
+     </SMTG_TMPL_CONT>
+     <SMTG_TMPL_CONT>
+      <ID>ZH2R0004_ACC_APV_MAIL</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <SUBJECT>Accommodation request for {{_AccRequest._Employee.FullName}} has been approved</SUBJECT>
+      <BODY_TXT>Dear {{_AccRequest._Employee.FullName}},
+Your accommodation request with the following parameters has been approved:
+Type: {{_AccRequest._AccType.AccTypeText}}
+Building: {{_AccRequest._AccBuild.AccBuildName}}
+Floor: {{_AccRequest._AccFloor.AccFloor}}
+Apartment: {{_AccRequest._AccApart.AccApart}} ({{_AccRequest._AccApart.ApartTypeText}})
+Bed: {{_AccRequest._AccBed.AccBed}} - {{_AccRequest._AccBed.Accid}} - {{_AccRequest._AccBed.Amount}}{{_AccRequest._AccBed.Currency}}
+{{AccOfficerNotes}}
+{{AccManagerNotes}}</BODY_TXT>
+      <BODY_HTML>Dear {{_AccRequest._Employee.FullName}}, 
+
+Your accommodation request with the following parameters has been approved: 
+
+Type: {{_AccRequest._AccType.AccTypeText}}
+Building: {{_AccRequest._AccBuild.AccBuildName}}
+Floor: {{_AccRequest._AccFloor.AccFloor}}
+Apartment: {{_AccRequest._AccApart.AccApart}} ({{_AccRequest._AccApart.ApartTypeText}})
+Bed: {{_AccRequest._AccBed.AccBed}} - {{_AccRequest._AccBed.Accid}} - {{_AccRequest._AccBed.Amount}}{{_AccRequest._AccBed.Currency}}
+
+{{AccOfficerNotes}}
+{{AccManagerNotes}}
+
+</BODY_HTML>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

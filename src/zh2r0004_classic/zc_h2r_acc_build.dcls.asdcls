@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_H2R_ACC_BUILD {
+  grant select on ZC_H2R_ACC_BUILD
+  where INHERITING CONDITIONS FROM ENTITY ZI_H2R_ACC_BUILD;
+}

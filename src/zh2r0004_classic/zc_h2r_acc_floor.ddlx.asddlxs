@@ -1,0 +1,57 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccFloor', 
+    typeNamePlural: 'AccFloors', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation floor', 
+      value: 'Build'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_FLOOR with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_FLOOR', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation floor', 
+    position: 1 
+  } ]
+  Build;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Floor;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  CreateUser;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  CreateTmst;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  ChangeUser;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  ChangeTmst;
+}

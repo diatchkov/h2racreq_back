@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Accommodation: maintain floors",
+    "originalLanguage": "en"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZH2R_UI_ACC_FLOOR_O4",
+    "serviceName": "ZH2R_UI_ACC_FLOOR_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "AccFloorAll",
+    "name": "Accommodation: floor",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "AccFloorAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "AccFloor",
+        "tableType": "gridTable",
+        "creationModeName": "creationRow",
+        "rowCountMode": "auto"
+      }
+    ]
+  }
+}

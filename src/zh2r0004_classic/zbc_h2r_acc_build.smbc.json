@@ -1,0 +1,38 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Accommodation: maintain buildings",
+    "originalLanguage": "en"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZH2R_UI_ACC_BUILD_O4",
+    "serviceName": "ZH2R_UI_ACC_BUILD_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "AccBuildAll",
+    "name": "Accommodation: building",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "AccBuildAll",
+        "variantManagement": "control"
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "AccBuild",
+        "tableType": "gridTable",
+        "creationModeName": "creationRow",
+        "rowCountMode": "auto"
+      },
+      {
+        "entitySet": "AccBuildText",
+        "tableType": "gridTable",
+        "creationModeName": "creationRow"
+      }
+    ]
+  }
+}

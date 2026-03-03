@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZZ1_90000001_CRT_28</ID>
+     <VERSION>A</VERSION>
+     <CDS_VIEW>ZC_H2R_ACC_ACREQ_MAIL</CDS_VIEW>
+     <PARENT_ID>ZH2R0004_ACC_INFO</PARENT_ID>
+     <ORIGINAL_ID>ZH2R0004_ACC_INFO</ORIGINAL_ID>
+     <ABAP_LANGUAGE_VERSION>2</ABAP_LANGUAGE_VERSION>
+     <SMTG_VERSION>1</SMTG_VERSION>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZZ1_90000001_CRT_28</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <NAME>Accommodation request: waiting approval</NAME>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZZ1_90000001_CRT_28</ID>
+      <VERSION>A</VERSION>
+      <LANGU>A</LANGU>
+      <SUBJECT>{{AccRequestText}} request waiting for approval</SUBJECT>
+      <BODY_TXT>{{AccRequestText}} Request Approval{{AccRequestText}} request submitted on {{CreateDate}} through the app is waiting for approval.Employee:{{AccUserFullName}}Accommodation type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Employee notes:{{AccEmpNotes}}Please log in to the app to review the full details and complete any additional steps required.Kind regards,Facilities TeamThis is an automated message. Please do not reply to this email.If you have questions, contact the facilities team at accommodation@contango.ae</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;{{AccRequestText}} Request Approval&lt;/title&gt;
+    &lt;style&gt;
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Main container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .header h1 {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        /* Content area */
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Request details */
+        .request-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .para {
+            margin-bottom: 12px;
+        }
+        .detail-label {
+            font-size: 12px;
+            font-weight: bold;
+            width: 40%;
+            color: #2c3e50;
+        }
+        
+        .detail-value {
+            font-size: 12px;
+            width: 60%;
+            color: #34495e;
+        }
+        
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .btn-approve {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .btn-deny {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-view {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                width: 100%;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;email-container&quot;&gt;        
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;p class=&quot;para&quot;&gt;{{AccRequestText}} request submitted on {{CreateDate}} through the app is waiting for approval.&lt;/p&gt;
+            &lt;div class=&quot;request-details&quot;&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccUserFullName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Accommodation type:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccTypeText}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Building:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBuildName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Floor:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccFloor}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Apartment:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccApart}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Bed:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBed}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee notes:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccEmpNotes}}&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p class=&quot;para&quot;&gt;Please log in to the app to review the full details and complete any additional steps required.&lt;/p&gt;
+            &lt;p class=&quot;para&quot;&gt;Kind regards,&lt;/p&gt;
+            &lt;p class=&quot;para&quot;&gt;&lt;b&gt;Facilities Team&lt;/b&gt;&lt;/p&gt;
+            
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;p&gt;This is an automated message. Please do not reply to this email.&lt;/p&gt;
+                &lt;p&gt;If you have questions, contact the facilities team at accommodation@contango.ae&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+     <SMTG_TMPL_CONT>
+      <ID>ZZ1_90000001_CRT_28</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <SUBJECT>{{AccRequestText}} request waiting for approval</SUBJECT>
+      <BODY_TXT>{{AccRequestText}} Request Approval{{AccRequestText}} request submitted on {{CreateDate}} through the app is waiting for approval.Employee:{{AccUserFullName}}Accommodation type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Employee notes:{{AccEmpNotes}}Please log in to the app to review the full details and complete any additional steps required.Kind regards,Facilities TeamThis is an automated message. Please do not reply to this email.If you have questions, contact the facilities team at accommodation@contango.ae</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;{{AccRequestText}} Request Approval&lt;/title&gt;
+    &lt;style&gt;
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Main container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .header h1 {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        /* Content area */
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Request details */
+        .request-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .para {
+            margin-bottom: 12px;
+        }
+        .detail-label {
+            font-size: 12px;
+            font-weight: bold;
+            width: 40%;
+            color: #2c3e50;
+        }
+        
+        .detail-value {
+            font-size: 12px;
+            width: 60%;
+            color: #34495e;
+        }
+        
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .btn-approve {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .btn-deny {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-view {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+            }
+            
+            .detail-label, .detail-value {
+                width: 100%;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;email-container&quot;&gt;        
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;p class=&quot;para&quot;&gt;{{AccRequestText}} request submitted on {{CreateDate}} through the app is waiting for approval.&lt;/p&gt;
+            &lt;div class=&quot;request-details&quot;&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccUserFullName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Accommodation type:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccTypeText}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Building:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBuildName}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Floor:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccFloor}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Apartment:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccApart}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Bed:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccBed}}&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;detail-row&quot;&gt;
+                    &lt;div class=&quot;detail-label&quot;&gt;Employee notes:&lt;/div&gt;
+                    &lt;div class=&quot;detail-value&quot;&gt;{{AccEmpNotes}}&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p class=&quot;para&quot;&gt;Please log in to the app to review the full details and complete any additional steps required.&lt;/p&gt;
+            &lt;p class=&quot;para&quot;&gt;Kind regards,&lt;/p&gt;
+            &lt;p class=&quot;para&quot;&gt;&lt;b&gt;Facilities Team&lt;/b&gt;&lt;/p&gt;
+            
+            &lt;div class=&quot;footer&quot;&gt;
+                &lt;p&gt;This is an automated message. Please do not reply to this email.&lt;/p&gt;
+                &lt;p&gt;If you have questions, contact the facilities team at accommodation@contango.ae&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

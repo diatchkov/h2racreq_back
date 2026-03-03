@@ -1,0 +1,4 @@
+define service ZH2R_UI_ACC_FLOOR {
+  expose ZC_H2R_ACC_FLOOR_S as AccFloorAll;
+  expose ZC_H2R_ACC_FLOOR as AccFloor;
+}

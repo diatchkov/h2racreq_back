@@ -1,0 +1,240 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+    typeName: 'Accommodation request ID',
+    title: { label: 'Request ID', value: 'AccRequestID', type: #STANDARD },
+    typeImageUrl: 'sap-icon://sap-icon://family-protection' }
+
+annotate entity ZC_H2R_ACC_ACREQ with
+{
+  @UI.facet: [
+    { purpose: #HEADER,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'AccStatusInfo',
+      position: 10 },
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Employee info',
+      targetQualifier: 'EmployeeInfo',
+      position: 20 },
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Accommodation',
+      targetQualifier: 'AccInfo',
+      position: 30 },
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Attachment',
+      targetQualifier: 'AccAttach',
+      position: 40 },      
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Accommodation notes',
+      targetQualifier: 'AccNotesInfo',
+      position: 50 },
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Check-in notes',
+      targetQualifier: 'CInNotesInfo',
+      position: 60 },
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Check-out notes',
+      targetQualifier: 'COutNotesInfo',
+      position: 70 },            
+    {
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Administration info',
+      targetQualifier: 'AdminInfo',
+      position: 80 }]
+  
+  @UI.lineItem: [{ 
+    type: #FOR_INTENT_BASED_NAVIGATION, 
+    semanticObjectAction: 'detail' }]    
+  AccRequestID;
+                          
+  @UI.lineItem: [ 
+    { position: 10, importance: #HIGH },
+    { type: #FOR_ACTION,
+      dataAction: 'Approval',
+      label: 'Submit',
+      importance: #HIGH,
+      position: 901 },
+    { type: #FOR_ACTION,
+      dataAction: 'CheckIn',
+      label: 'Check in',
+      importance: #HIGH,
+      position: 902 },
+    { type: #FOR_ACTION,
+      dataAction: 'CheckOut',
+      label: 'Check out',
+      importance: #HIGH,
+      position: 903 } ]
+      
+  @UI.identification: [ 
+    { type: #FOR_ACTION,
+      dataAction: 'Approval',
+      label: 'Submit',
+      importance: #HIGH,
+      determining: true,
+      position: 901 },
+    { type: #FOR_ACTION,
+      dataAction: 'CheckIn',
+      label: 'Check in',
+      importance: #HIGH,
+      determining: true,
+      position: 902 },
+    { type: #FOR_ACTION,
+      dataAction: 'CheckOut',
+      label: 'Check out',
+      importance: #HIGH,
+      determining: true,
+      position: 903 } ]
+            
+  @UI.fieldGroup: [{ qualifier: 'AccStatusInfo', position: 10 }]
+  AccStatus;
+
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 10 } ]
+  @EndUserText.label: 'Employee ID'
+  AccEmployee;
+
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 20 } ]
+  @EndUserText.label: 'Name'
+  AccEmployeeFullName;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 30 } ]
+  @EndUserText.label: 'Designation'
+  AccEmployeePositionName;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 40 } ]
+  @EndUserText.label: 'Unit'
+  AccEmployeeOrgUnitName;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 50 } ]
+  @EndUserText.label: 'Department'
+  AccEmployeeDepUnitName;
+    
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 60 } ]
+  @EndUserText.label: 'Employee type'
+  AccEmployeeGroupName;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 70 } ]
+  @EndUserText.label: 'Grade'
+  AccEmployeeGrade;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 80 } ]
+  @EndUserText.label: 'Joining date'
+  AccEmployeeJoinDate;
+
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfo', position: 90 } ]
+  @EndUserText.label: 'Probation end'
+  AccEmployeeProbationEnd;
+          
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.fieldGroup: [ { qualifier: 'AccInfo', position: 10 } ]
+  AccType;
+
+  @UI.lineItem: [ { position: 50 } ]
+  @UI.fieldGroup: [ { qualifier: 'AccInfo', position: 20 } ]
+  AccBuild;
+
+  @UI.lineItem: [ { position: 60 } ]
+  @UI.fieldGroup: [ { qualifier: 'AccInfo', position: 30 } ]
+  AccFloor;
+
+  @UI.lineItem: [ { position: 70 } ]
+  @UI.fieldGroup: [ { qualifier: 'AccInfo', position: 40 } ]
+  AccApart;
+
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.fieldGroup: [ { qualifier: 'AccInfo', position: 50 } ]
+  AccBed;
+
+  @UI.fieldGroup: [ { qualifier: 'AccAttach', position: 10 } ]
+  AccAttachment; 
+  
+  @UI.hidden: true
+  AccMimeType;
+  
+  @UI.hidden: true
+  AccFileName;
+
+  @UI.fieldGroup: [ { qualifier: 'AccNotesInfo', position: 10 } ]
+  @UI.multiLineText: true
+  AccPersonNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'AccNotesInfo', position: 20 } ]
+  @UI.multiLineText: true
+  AccOfficerNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'AccNotesInfo', position: 30 } ]
+  @UI.multiLineText: true
+  AccManagerNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'CInNotesInfo', position: 10 } ]
+  @UI.multiLineText: true
+  CInPersonNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'CInNotesInfo', position: 20 } ]
+  @UI.multiLineText: true
+  CInOfficerNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'CInNotesInfo', position: 30 } ]
+  @UI.multiLineText: true
+  CInManagerNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'COutNotesInfo', position: 10 } ]
+  @UI.multiLineText: true
+  COutPersonNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'COutNotesInfo', position: 20 } ]
+  @UI.multiLineText: true
+  COutOfficerNotes;
+
+  @UI.fieldGroup: [ { qualifier: 'COutNotesInfo', position: 30 } ]
+  @UI.multiLineText: true
+  COutManagerNotes;
+    
+  @UI.hidden: true
+  AccBeginDate;
+
+  @UI.hidden: true
+  AccEndDate;
+
+  @UI.fieldGroup: [{
+    qualifier: 'AdminInfo',
+    label: 'Created on',
+    position: 10
+  }]
+  CreateTmst;
+
+  @UI.fieldGroup: [{
+    qualifier: 'AdminInfo',
+    label: 'Created by',
+    position: 20,
+    type: #AS_CONTACT,
+    value: '_CreateUserContactCard' }]
+  CreateUser;
+
+  @UI.fieldGroup: [{
+    qualifier: 'AdminInfo',
+    position: 30 }]
+  ChangeTmst;
+
+  @UI.fieldGroup: [{
+  label: 'Changed by',
+  qualifier: 'AdminInfo',
+  position: 40,
+  type: #AS_CONTACT,
+  value: '_ChangeUserContactCard' }]
+  ChangeUser;
+}

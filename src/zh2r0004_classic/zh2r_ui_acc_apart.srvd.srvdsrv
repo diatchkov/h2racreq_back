@@ -1,0 +1,4 @@
+define service ZH2R_UI_ACC_APART {
+  expose ZC_H2R_ACC_APART_S as AccApartAll;
+  expose ZC_H2R_ACC_APART as AccApart;
+}

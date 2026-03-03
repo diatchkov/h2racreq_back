@@ -1,0 +1,5 @@
+define service ZH2R_UI_ACC_BUILD {
+  expose ZC_H2R_ACC_BUILD_S as AccBuildAll;
+  expose ZC_H2R_ACC_BUILD as AccBuild;
+  expose ZC_H2R_ACC_BUILDT as AccBuildText;
+}

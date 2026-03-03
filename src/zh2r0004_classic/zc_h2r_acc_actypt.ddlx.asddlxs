@@ -1,0 +1,37 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccTypeText', 
+    typeNamePlural: 'AccTypeTexts', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation type text', 
+      value: 'Spras'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_ACTYPT with
+{
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_ACTYPT', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation type text', 
+    position: 1 
+  } ]
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  Spras;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  ActypeText;
+}

@@ -1,0 +1,4 @@
+define service ZH2R_UI_ACC_BED {
+  expose ZC_H2R_ACC_BED_S as AccApartBedAll;
+  expose ZC_H2R_ACC_BED as AccApartBed;
+}

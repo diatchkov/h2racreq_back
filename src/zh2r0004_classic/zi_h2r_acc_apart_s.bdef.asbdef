@@ -1,0 +1,76 @@
+managed with additional save implementation in class ZBP_R_H2R_ACC_APART unique;
+strict;
+with draft;
+
+define behavior for ZI_H2R_ACC_APART_S alias AccApartAll
+draft table ZTH2R_S_APART
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _AccApart { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_H2R_ACC_APART alias AccApart
+persistent table ZTH2R_A_APART
+draft table ZTH2R_D_APART
+etag master LocalChangeTmst
+lock dependent by _AccApartAll
+authorization dependent by _AccApartAll
+
+{
+  field ( mandatory : create )
+   Build,
+   Floor,
+   Apart;
+
+  field ( readonly )
+   SingletonID,
+   CreateUser,
+   CreateTmst,
+   ChangeUser,
+   ChangeTmst,
+   LocalChangeTmst;
+
+  field ( readonly : update )
+   Build,
+   Floor,
+   Apart;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZTH2R_A_APART
+  {
+    Build = BUILD;
+    Floor = FLOOR;
+    Apart = APART;
+    Atype = ATYPE;
+    CreateUser = CREATE_USER;
+    CreateTmst = CREATE_TMST;
+    ChangeUser = CHANGE_USER;
+    ChangeTmst = CHANGE_TMST;
+    LocalChangeTmst = LOCAL_CHANGE_TMST;
+  }
+
+  association _AccApartAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

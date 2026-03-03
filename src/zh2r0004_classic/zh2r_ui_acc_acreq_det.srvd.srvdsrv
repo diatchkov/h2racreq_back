@@ -1,0 +1,5 @@
+@EndUserText.label: 'Accommodation: request details'
+define service ZH2R_UI_ACC_ACREQ_DET {
+  expose ZC_H2R_ACC_ACREQ_DET as AccRequest;
+  expose ZI_UserContactCard;
+}

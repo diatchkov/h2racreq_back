@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_H2R_ACC_FLOOR_S alias AccFloorAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _AccFloor { create; with draft; }
+}
+
+define behavior for ZC_H2R_ACC_FLOOR alias AccFloor
+
+{
+  use update;
+  use delete;
+
+  use association _AccFloorAll { with draft; }
+}

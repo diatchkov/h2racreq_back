@@ -1,0 +1,97 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccApartBed', 
+    typeNamePlural: 'AccApartBeds', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation bed', 
+      value: 'Build'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_BED with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_BED', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation bed', 
+    position: 1 
+  } ]
+  Build;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Floor;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Apart;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  Bed;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  Accid;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  @UI.lineItem: [ {
+    position: 6 
+  } ]
+  Amount;
+  
+  @Consumption.valueHelpDefinition: [ {
+    entity: {
+      name: 'I_Currency', 
+      element: 'Currency'
+    }
+  } ]
+  Currency;
+  
+  @UI.identification: [ {
+    position: 7 
+  } ]
+  CreateUser;
+  
+  @UI.identification: [ {
+    position: 8 
+  } ]
+  CreateTmst;
+  
+  @UI.identification: [ {
+    position: 9 
+  } ]
+  ChangeUser;
+  
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  ChangeTmst;
+}

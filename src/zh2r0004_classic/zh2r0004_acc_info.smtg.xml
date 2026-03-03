@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZH2R0004_ACC_INFO</ID>
+     <VERSION>A</VERSION>
+     <CDS_VIEW>ZC_H2R_ACC_ACREQ_MAIL</CDS_VIEW>
+     <IS_PREDELIVERED>X</IS_PREDELIVERED>
+     <SMTG_VERSION>1</SMTG_VERSION>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZH2R0004_ACC_INFO</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <NAME>Accommodation request: information</NAME>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZH2R0004_ACC_INFO</ID>
+      <VERSION>A</VERSION>
+      <LANGU>A</LANGU>
+      <BODY_TXT>Hello,{{AccRequestText}} request has been submitted and requires your approval. Please review the details:Employee:{{AccUserFullName}}Accommodation Type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Employee notes:{{AccEmpNotes}}Please take action on this request by clicking one of the buttons below.</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;Hello,&lt;/p&gt;
+  &lt;p&gt;{{AccRequestText}} request has been submitted and requires your approval. Please review the details:&lt;/p&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Employee:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccUserFullName}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Accommodation Type:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccTypeText}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Building:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccBuildName}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Floor:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccFloor}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Apartment:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccApart}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Bed:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccBed}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Employee notes:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccEmpNotes}}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;p&gt;Please take action on this request by clicking one of the buttons below.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+     <SMTG_TMPL_CONT>
+      <ID>ZH2R0004_ACC_INFO</ID>
+      <VERSION>A</VERSION>
+      <LANGU>E</LANGU>
+      <BODY_TXT>Hello,{{AccRequestText}} request has been submitted and requires your approval.Please review the details:Employee:{{AccUserFullName}}Accommodation Type:{{AccTypeText}}Building:{{AccBuildName}}Floor:{{AccFloor}}Apartment:{{AccApart}}Bed:{{AccBed}}Employee notes:{{AccEmpNotes}}Please take action on this request by clicking one of the buttons below.</BODY_TXT>
+      <BODY_HTML>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;span&gt;Hello,&lt;/span&gt;
+  &lt;p&gt;{{AccRequestText}} request has been submitted and requires your approval. 
+    Please review the details:&lt;/p&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Employee:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccUserFullName}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Accommodation Type:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccTypeText}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Building:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccBuildName}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Floor:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccFloor}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Apartment:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccApart}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Bed:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccBed}}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Employee notes:&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{AccEmpNotes}}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;p&gt;Please take action on this request by clicking one of the buttons below.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</BODY_HTML>
+      <AUTOGEN_TXT>X</AUTOGEN_TXT>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

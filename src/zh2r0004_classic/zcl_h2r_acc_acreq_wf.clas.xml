@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_H2R_ACC_ACREQ_WF</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Accomodation: workflow class</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>APPROVED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Approved</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CANCEL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Cancel</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_CLASS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check Class for Infotype (Integrated into Framework)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_INFO_TEMPLATE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Identifier for an Email Template</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_LPOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Local Persistent Object Reference</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_ACREQ</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>16 byte UUID in 36 chars according to RFC4122</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_REQID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>16 Byte UUID in 16 Bytes (Raw Format)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REJECTED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Rejected</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>RESTART</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Restart</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SUBMIT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Submit</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>APPROVED</CMPNAME>
+     <SCONAME>IV_AGENT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Agent</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>APPROVED</CMPNAME>
+     <SCONAME>IV_DECISION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Element</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IS_LPOR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>16 Byte UUID in 16 Bytes (Raw Format)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INFO</CMPNAME>
+     <SCONAME>IV_WIID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Work item ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INFO</CMPNAME>
+     <SCONAME>RT_INFO</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Objcont and Objhead as Table Type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_STATUS</CMPNAME>
+     <SCONAME>RV_STATUS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Accommodation: status</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUBJECT</CMPNAME>
+     <SCONAME>RV_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Accommodation: status</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REJECTED</CMPNAME>
+     <SCONAME>IV_AGENT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Agent</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REJECTED</CMPNAME>
+     <SCONAME>IV_DECISION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Element</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_COMMENT</CMPNAME>
+     <SCONAME>IV_COMMENT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Character value</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+   <ATTRIBUTES>
+    <item>
+     <CMPNAME>MV_REQID</CMPNAME>
+     <ATTKEYFLD>X</ATTKEYFLD>
+     <EXPOSURE>2</EXPOSURE>
+    </item>
+   </ATTRIBUTES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

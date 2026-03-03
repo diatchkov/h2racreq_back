@@ -1,0 +1,94 @@
+managed implementation in class zbp_r_h2r_acc_acreq unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_H2R_ACC_ACREQ alias H2RAccRequest
+persistent table zth2r_a_acreq
+draft table zth2r_d_acreq
+authorization master ( instance )
+etag master LocalChangeTmst
+lock master total etag ChangeTmst
+with additional save
+{
+  field ( readonly, numbering : managed )
+  AccRequestID;
+
+
+  field ( mandatory )
+  AccType,
+  AccBuild,
+  AccFloor,
+  AccApart,
+  AccBed;
+
+  field ( features : instance )
+  AccPersonNotes,
+  CInPersonNotes,
+  COutPersonNotes;
+
+  field ( readonly )
+  AccStatus,
+  AccOfficerNotes,
+  AccManagerNotes,
+  CInOfficerNotes,
+  CInManagerNotes,
+  COutOfficerNotes,
+  COutManagerNotes,
+  CreateTmst,
+  CreateUser,
+  ChangeTmst,
+  ChangeUser,
+  LocalChangeTmst;
+
+  create;
+  update;
+  delete ( features : instance );
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  determination onCreate on modify { create; }
+
+  action setStatus parameter zh2r_acc_status;
+  action setApprovedStatus;
+  action setRejectedStatus;
+  action setComment parameter swc_value;
+
+  action ( features : instance ) Approval;
+  action ( features : instance ) CheckIn;
+  action ( features : instance ) CheckOut;
+
+  mapping for zth2r_a_acreq
+    {
+      AccRequestID     = reqid;
+      AccStatus        = status;
+      AccUser          = acuser;
+      AccType          = actype;
+      AccBuild         = build;
+      AccFloor         = floor;
+      AccApart         = apart;
+      AccBed           = bed;
+      AccBeginDate     = begda;
+      AccEndDate       = endda;
+      AccAttachment    = attachment;
+      AccMimeType      = mimetype;
+      AccFileName      = filename;
+      AccPersonNotes   = emp_notes;
+      AccOfficerNotes  = fso_notes;
+      AccManagerNotes  = fsm_notes;
+      CInPersonNotes   = emp_in_notes;
+      CInOfficerNotes  = fso_in_notes;
+      CInManagerNotes  = fsm_in_notes;
+      COutPersonNotes  = emp_out_notes;
+      COutOfficerNotes = fso_out_notes;
+      COutManagerNotes = fsm_out_notes;
+      CreateUser       = create_user;
+      CreateTmst       = create_tmst;
+      ChangeUser       = change_user;
+      ChangeTmst       = change_tmst;
+      LocalChangeTmst  = local_change_tmst;
+    }
+}

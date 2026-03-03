@@ -1,0 +1,2 @@
+sap.ui.define(["sap/suite/ui/generic/template/lib/AppComponent"],function(e){"use strict";const t=e.extend("ae.emsteel.asas.h2racreqdet.Component",{metadata:{manifest:"json"}});return t});                                                                   
+//# sourceMappingURL=Component.js.map                                                                                                                                                                                                                          

@@ -1,0 +1,73 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccApart', 
+    typeNamePlural: 'AccAparts', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation apartment', 
+      value: 'Build'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_APART with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_APART', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation apartment', 
+    position: 1 
+  } ]
+  Build;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Floor;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Apart;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  Atype;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  CreateUser;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  CreateTmst;
+  
+  @UI.identification: [ {
+    position: 7 
+  } ]
+  ChangeUser;
+  
+  @UI.identification: [ {
+    position: 8 
+  } ]
+  ChangeTmst;
+}

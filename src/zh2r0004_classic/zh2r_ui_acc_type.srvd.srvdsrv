@@ -1,0 +1,5 @@
+define service ZH2R_UI_ACC_TYPE {
+  expose ZC_H2R_ACC_ACTYPE_S as AccTypeAll;
+  expose ZC_H2R_ACC_ACTYPE as AccType;
+  expose ZC_H2R_ACC_ACTYPT as AccTypeText;
+}

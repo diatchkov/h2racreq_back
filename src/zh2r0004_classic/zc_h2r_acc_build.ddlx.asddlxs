@@ -1,0 +1,65 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccBuild', 
+    typeNamePlural: 'AccBuilds', 
+    title: {
+      type: #STANDARD, 
+      label: 'Accomodation building', 
+      value: 'Build'
+    }
+  }
+}
+annotate view ZC_H2R_ACC_BUILD with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_H2R_ACC_BUILD', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Accomodation building', 
+    position: 1 
+  }, 
+  {
+    id: 'ZI_H2R_ACC_BUILDT', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Accomodation building text', 
+    position: 2 , 
+    targetElement: '_AccBuildText'
+  } ]
+  Build;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  CreateUser;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  CreateTmst;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  ChangeUser;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  ChangeTmst;
+  
+  @UI.identification: [ {
+    hidden: true, 
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  BuildName;
+}
